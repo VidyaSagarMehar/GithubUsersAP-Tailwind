@@ -25,7 +25,8 @@ https://githubusertailwind.netlify.app/
 
 
 ## Screenshots
-![githubusertailwind netlify app_](https://user-images.githubusercontent.com/92782806/230606951-c2e4fcf8-2157-41b8-b4fd-3a2070f690a0.png)
+![Screenshot 2023-04-07 174750](https://user-images.githubusercontent.com/92782806/230607557-a0c6366e-6365-4216-8270-4ff7395b51d0.png)
+
 
 
 
