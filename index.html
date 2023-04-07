@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get users | github</title>
+    <!-- Tailwind CDN link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F172A',
+                        secondary: '#314A87',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0F172A;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 2 1'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(0,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%230F172A'/%3E%3Cstop offset='1' stop-color='%23314A87'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='0' y2='1' gradientTransform='rotate(17,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%230E1B2A' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%230E1B2A' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='2' y2='2' gradientTransform='rotate(0,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%230E1B2A' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%230E1B2A' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='2' height='1'/%3E%3Cg fill-opacity='0.29'%3E%3Cpolygon fill='url(%23b)' points='0 1 0 0 2 0'/%3E%3Cpolygon fill='url(%23c)' points='2 1 2 0 0 0'/%3E%3C/g%3E%3C/svg%3E");
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body class="bg-primary">
+    <!-- Header section -->
+    <header class="p-4 bg-gradient-to-b from-secondary text-white flex mx-auto">
+        <div class="container flex flex-row h-16 mx-auto">
+            <a rel="noopener noreferrer" href="#" aria-label="Back to homepage" class="flex items-center p-2">
+                <img src="./github-svgrepo-com.png" alt="image" width="50px">
+            </a>
+            <h1 class="text-2xl text-bold my-auto mx-4">Get github user</h1>
+        </div>
+        <div class="flex items-center md:space-x-4">
+            <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+                    <button onclick="getuser()" type="submit" title="Search" class="p-1 focus:outline-none focus:ring">
+                        <svg fill="primary" viewBox="0 0 512 512" class="w-4 h-4 text-primary">
+                            <path
+                                d="M479.6,399.716l-81.084-81.084-62.368-25.767A175.014,175.014,0,0,0,368,192c0-97.047-78.953-176-176-176S16,94.953,16,192,94.953,368,192,368a175.034,175.034,0,0,0,101.619-32.377l25.7,62.2L400.4,478.911a56,56,0,1,0,79.2-79.195ZM48,192c0-79.4,64.6-144,144-144s144,64.6,144,144S271.4,336,192,336,48,271.4,48,192ZM456.971,456.284a24.028,24.028,0,0,1-33.942,0l-76.572-76.572-23.894-57.835L380.4,345.771l76.573,76.572A24.028,24.028,0,0,1,456.971,456.284Z">
+                            </path>
+                        </svg>
+                    </button>
+                </span>
+                <input id="search" type="search" name="Search" placeholder="Search..." value="VidyaSagarMehar"
+                    class="w-32 py-2 pl-10 text-lg rounded-md sm:w-auto focus:outline-none bg-gray-100 text-primary focus:bg-gray-100 focus:text-primary">
+            </div>
+    </header>
+
+    <!-- hero section -->
+    <section class="bg-transparent text-gray-100">
+        <div
+            class="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+
+            <!-- user Profile -->
+            <div class="max-w-md p-8 sm:flex sm:space-x-6 bg-transparent text-gray-100">
+                <div class="flex-shrink-0 w-full mb-6 h-44 sm:h-32 sm:w-32 sm:mb-0">
+                    <img id="img" src="" alt=" image"
+                        class="object-cover object-center w-full h-full rounded dark:bg-gray-500">
+                </div>
+                <div class="flex flex-col space-y-4">
+                    <div>
+                        <h2 id="name" class="text-2xl font-semibold"> Name </h2>
+                        <span id="bio" class="text-sm dark:text-gray-400"> Bio</span>
+                    </div>
+                    <div class="space-y-1">
+                        <span class="flex items-center space-x-2">
+
+                            <span id="email" class="dark:text-gray-400">Email</span>
+                        </span>
+                        <span class="flex items-center space-x-2">
+                            <span id="blog" class="dark:text-gray-400">Blog</span>
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+            <!-- User profile ends -->
+
+            <div class="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
+                <h1 class="text-3xl font-bold leading-none sm:text-4xl  mb-4 text-center">Repositories
+                </h1>
+                <span id="repoList" class="mt- 4 text-xl text-center"></span>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- link of javascript -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
