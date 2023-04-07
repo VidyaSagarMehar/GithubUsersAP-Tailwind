@@ -5,7 +5,7 @@
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 ## Project Title - Get Github Users
-The "Get Github Users" app is a web-based application that allows users to search for and retrieve information about Github users using the Github API. The Github API provides access to a wealth of data about Github users, including their profiles, repositories, followers, and more.
+The "Get Github Users" app is a web-based application that allows users to search for and retrieve information about Github users using the Github API. The Github API provides access to a wealth of data about Github users, including their profiles, repositories, and more.
 
 
 ## Average time to complete
@@ -25,6 +25,7 @@ https://githubusertailwind.netlify.app/
 
 
 ## Screenshots
+![githubusertailwind netlify app_](https://user-images.githubusercontent.com/92782806/230606951-c2e4fcf8-2157-41b8-b4fd-3a2070f690a0.png)
 
 
 
